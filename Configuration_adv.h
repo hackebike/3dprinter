@@ -516,8 +516,8 @@
 // @section homing
 
 // Homing hits each endstop, retracts by these distances, then does a slower bump.
-#define X_HOME_BUMP_MM 5
-#define Y_HOME_BUMP_MM 5
+#define X_HOME_BUMP_MM 3
+#define Y_HOME_BUMP_MM 3
 #define Z_HOME_BUMP_MM 2
 #define HOMING_BUMP_DIVISOR { 2, 2, 4 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 //#define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
@@ -527,7 +527,7 @@
 //#define HOME_Y_BEFORE_X
 
 // Enable this if X or Y can't home without homing the other axis first.
-#define CODEPENDENT_XY_HOMING
+//#define CODEPENDENT_XY_HOMING
 
 #if ENABLED(BLTOUCH)
   /**
@@ -1795,7 +1795,7 @@
   #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT     900  // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define X_CURRENT     950  // (mA) RMS current. Multiply by 1.414 for peak current.
     #define X_MICROSTEPS   16  // 0..256
     #define X_RSENSE     0.11
     #define X_CHAIN_POS    -1  // <=0 : Not chained. 1 : MCU MOSI connected. 2 : Next in chain, ...
@@ -1809,7 +1809,7 @@
   #endif
 
   #if AXIS_IS_TMC(Y)
-    #define Y_CURRENT     900
+    #define Y_CURRENT     950
     #define Y_MICROSTEPS   16
     #define Y_RSENSE     0.11
     #define Y_CHAIN_POS    -1
@@ -1823,7 +1823,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT     900
+    #define Z_CURRENT     950
     #define Z_MICROSTEPS   16
     #define Z_RSENSE     0.11
     #define Z_CHAIN_POS    -1
@@ -1844,14 +1844,14 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT    900
+    #define E0_CURRENT    950
     #define E0_MICROSTEPS  16
     #define E0_RSENSE    0.11
     #define E0_CHAIN_POS   -1
   #endif
 
   #if AXIS_IS_TMC(E1)
-    #define E1_CURRENT    900
+    #define E1_CURRENT    950
     #define E1_MICROSTEPS  16
     #define E1_RSENSE    0.11
     #define E1_CHAIN_POS   -1
@@ -1998,13 +1998,13 @@
    * STEALTHCHOP_(XY|Z|E) must be enabled to use HYBRID_THRESHOLD.
    * M913 X/Y/Z/E to live tune the setting
    */
-  #define HYBRID_THRESHOLD
+  //#define HYBRID_THRESHOLD
 
   #define X_HYBRID_THRESHOLD     100  // [mm/s]
   #define X2_HYBRID_THRESHOLD    100
   #define Y_HYBRID_THRESHOLD     100
   #define Y2_HYBRID_THRESHOLD    100
-  #define Z_HYBRID_THRESHOLD       3
+  #define Z_HYBRID_THRESHOLD     100
   #define Z2_HYBRID_THRESHOLD      3
   #define Z3_HYBRID_THRESHOLD      3
   #define E0_HYBRID_THRESHOLD     30
@@ -2049,10 +2049,10 @@
 
   #if EITHER(SENSORLESS_HOMING, SENSORLESS_PROBING)
     // TMC2209: 0...255. TMC2130: -64...63
-    #define X_STALL_SENSITIVITY  50
+    #define X_STALL_SENSITIVITY  60
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
-    #define Y_STALL_SENSITIVITY  50
-    #define Z_STALL_SENSITIVITY  50
+    #define Y_STALL_SENSITIVITY  60
+    #define Z_STALL_SENSITIVITY  60
     //#define SPI_ENDSTOPS              // TMC2130 only
     #define IMPROVE_HOMING_RELIABILITY
   #endif

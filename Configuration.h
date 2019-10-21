@@ -554,8 +554,8 @@
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
-#define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 200
+//#define PREVENT_LENGTHY_EXTRUDE
+//#define EXTRUDE_MAXLENGTH 200
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -639,9 +639,9 @@
 #define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+//#define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
 
 /**
@@ -814,7 +814,7 @@
  *
  * Enable this option for a probe connected to the Z Min endstop pin.
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 /**
  * Z_MIN_PROBE_PIN
@@ -1021,7 +1021,7 @@
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
-#define INVERT_Y_DIR true
+#define INVERT_Y_DIR false
 #define INVERT_Z_DIR false
 
 // @section extruder
@@ -1546,7 +1546,7 @@
  *   M76 - Pause the print job timer
  *   M77 - Stop the print job timer
  */
-#define PRINTJOB_TIMER_AUTOSTART
+//#define PRINTJOB_TIMER_AUTOSTART
 
 /**
  * Print Counter
