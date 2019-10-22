@@ -2052,7 +2052,7 @@
     #define X_STALL_SENSITIVITY  60
     #define X2_STALL_SENSITIVITY X_STALL_SENSITIVITY
     #define Y_STALL_SENSITIVITY  60
-    #define Z_STALL_SENSITIVITY  60
+    #define Z_STALL_SENSITIVITY  76
     //#define SPI_ENDSTOPS              // TMC2130 only
     #define IMPROVE_HOMING_RELIABILITY
   #endif
